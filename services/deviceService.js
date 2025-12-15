@@ -172,10 +172,12 @@ class DeviceService {
 
   /**
    * Clear all users
+   * Note: Uses clearAdminPrivilege() from node-zklib which clears all user data from device
    */
   async clearAllUsers() {
     try {
       this.ensureConnected();
+      // Note: clearAdminPrivilege() actually clears all users from the device
       await this.device.clearAdminPrivilege();
       logger.info('All users cleared');
       return { success: true, message: 'All users cleared successfully' };

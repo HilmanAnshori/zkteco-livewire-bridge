@@ -43,7 +43,17 @@ mkdir -p $INSTALL_DIR
 
 # Copy files
 echo "Copying application files..."
-cp -r ./* $INSTALL_DIR/
+# Copy only necessary files, exclude sensitive data
+cp package.json $INSTALL_DIR/
+cp index.js $INSTALL_DIR/
+cp install.sh $INSTALL_DIR/
+cp zkteco-bridge.service $INSTALL_DIR/
+cp -r controllers $INSTALL_DIR/
+cp -r services $INSTALL_DIR/
+cp -r utils $INSTALL_DIR/
+cp .env.example $INSTALL_DIR/
+cp README.md $INSTALL_DIR/ 2>/dev/null || true
+cp *.md $INSTALL_DIR/ 2>/dev/null || true
 cd $INSTALL_DIR
 
 # Install dependencies
