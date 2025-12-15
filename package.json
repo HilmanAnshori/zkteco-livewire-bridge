@@ -1,0 +1,34 @@
+{
+  "name": "zkteco-livewire-bridge",
+  "version": "1.0.0",
+  "description": "Node.js bridge application for Laravel Livewire 3 to ZKTeco ZK9500 USB connection",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "zkteco",
+    "laravel",
+    "livewire",
+    "biometric",
+    "attendance"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "body-parser": "^1.20.2",
+    "node-zklib": "^1.3.0",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
